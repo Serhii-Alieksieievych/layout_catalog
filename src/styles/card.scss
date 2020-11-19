@@ -15,6 +15,7 @@
 }
 
 .card__image {
+  box-sizing: content-box;
   height: $image-height;
   width: $image-width;
   display: block;
@@ -25,7 +26,6 @@
     transform: scale(1.2, 1.2) translate(0, -15px);
     border: solid 3px #f3f3f3;
     position: relative;
-    box-sizing: content-box;
     padding-top: 10px;
     margin-bottom: 18px;
   }
