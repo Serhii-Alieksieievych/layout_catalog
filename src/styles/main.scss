@@ -1,10 +1,13 @@
 @import "variables";
 @import "mixines";
 
+.page__main {
+  margin-top: 50px * $proportion-header;
+}
+
 .main {
-  margin: 0 auto;
-  max-width: 1200px;
-  flex-wrap: wrap;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, $card-width);
+  grid-gap: 48px;
   justify-content: center;
 }

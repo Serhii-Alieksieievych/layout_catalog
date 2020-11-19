@@ -1,27 +1,23 @@
 @import "variables";
 @import "mixines";
 
-.navigation__list {
-  padding-left: 0;
-  * {
-    @include flex-center;
-    height: $header-height;
-    list-style: none;
-    margin-left: 20px * $proportion-header;
+.navigation {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    gap: 20px;
   }
-  :nth-child(1) {
-    margin-left: 0;
+
+  &__link {
+    display: flex;
+    line-height: $header-height;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 12px * $proportion-header;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
-}
-
-.navigation__link {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  font-size: 12px * $proportion-header;
-  text-transform: uppercase;
-  white-space: nowrap;
-
 }
 
 .is-active,
