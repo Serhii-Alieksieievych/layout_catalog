@@ -19,7 +19,16 @@
   width: $image-width;
   display: block;
   margin: 30px * $proportion-card auto 45px * $proportion-card;
-  transition: transform 1s, padding 1s;
+  transition: transform 1s, padding-top 1s, margin-bottom 1s;
+
+  &:hover {
+    transform: scale(1.2, 1.2) translate(0, -15px);
+    border: solid 3px #f3f3f3;
+    position: relative;
+    box-sizing: content-box;
+    padding-top: 10px;
+    margin-bottom: 18px;
+  }
 }
 
 .card__description {
