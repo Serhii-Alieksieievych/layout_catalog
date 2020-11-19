@@ -11,7 +11,7 @@
 }
 
 .main__card {
-  margin: 0 $card-margin * $proportion-card 50px;
+  margin-bottom: 2px;
 }
 
 .card__image {
@@ -38,7 +38,8 @@
 
 .card__price,
 .card__rating {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
   justify-content: space-between;
   width: 170px * $proportion-card;
   margin-left: auto;
