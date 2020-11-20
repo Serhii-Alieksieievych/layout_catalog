@@ -1,6 +1,10 @@
 @import "variables";
 @import "mixines";
 
+.main__card {
+  margin: 0 $card-margin * $proportion-card 50px;
+}
+
 .card {
   width: $card-width;
   height: 403px * $proportion-card;
@@ -8,76 +12,75 @@
   background: $white;
   border: $card-border solid #f3f3f3;
   border-radius: 5px * $proportion-card;
-}
 
-.main__card {
-  margin: 0 $card-margin * $proportion-card 50px;
-}
-
-.card__image {
-  box-sizing: content-box;
-  height: $image-height;
-  width: $image-width;
-  display: block;
-  margin: 30px * $proportion-card auto 45px * $proportion-card;
-  transition: transform 1s, padding-top 1s, margin-bottom 1s;
-
-  &:hover {
-    transform: scale(1.2, 1.2) translate(0, -15px);
-    border: solid 3px #f3f3f3;
-    position: relative;
-    padding-top: 10px;
-    margin-bottom: 18px;
+  &__border-for-image {
+    display: flex;
+    width: $image-width+6px;
+    margin: 15px * $proportion-card auto 42px * $proportion-card;
+    padding-top: 12px;
+    justify-content: center;
+    border: solid 3px #fff;
+    transition: transform 1s;
+    &:hover {
+      transform: scale(1.2, 1.2);
+      border-color: #f3f3f3;
+    }
   }
-}
 
-.card__description {
-  font-weight: 500;
-  font-size: 12px * $proportion-card;
-  line-height: 15px * $proportion-card;
-  width: 170px * $proportion-card;
-  margin: 0 auto 5px * $proportion-card;
-}
+  &__image {
+    height: $image-height;
+    width: $image-width;
+    display: block;
+  }
 
-.card__code {
-  font-size: 11px * $proportion-card;
-  width: 170px * $proportion-card;
-  margin: 0 auto 16px * $proportion-card;
-}
+  &__description {
+    font-weight: 500;
+    font-size: 12px * $proportion-card;
+    line-height: 15px * $proportion-card;
+    width: 170px * $proportion-card;
+    margin: 0 auto 5px * $proportion-card;
+  }
 
-.card__price,
-.card__rating {
-  display: flex;
-  justify-content: space-between;
-  width: 170px * $proportion-card;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.card__rating {
-  align-items: flex-start;
-  margin-bottom: 20px * $proportion-card;
-}
-
-.card__feedback {
-  font-size: 11px * $proportion-card;
-  text-align: right;
-  font-weight: 400;
-  color: #000;
-}
-
-.card__price {
-  height: 15px * $proportion-card;
-  > :nth-child(1) {
-    margin-top: 5px * $proportion-card;
+  &__code {
     font-size: 11px * $proportion-card;
-    line-height: 13px * $proportion-card;
-    text-align: right;
+    width: 170px * $proportion-card;
+    margin: 0 auto 16px * $proportion-card;
   }
-  > :nth-child(2) {
-    font-weight: bold;
-    font-size: 16px * $proportion-card;
-    line-height: 19px * $proportion-card;
+
+  &__price,
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    width: 170px * $proportion-card;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__rating {
+    align-items: flex-start;
+    margin-bottom: 20px * $proportion-card;
+  }
+
+  &__feedback {
+    font-size: 11px * $proportion-card;
     text-align: right;
+    font-weight: 400;
+    color: #000;
+  }
+
+  &__price {
+    height: 15px * $proportion-card;
+    > :nth-child(1) {
+      margin-top: 5px * $proportion-card;
+      font-size: 11px * $proportion-card;
+      line-height: 13px * $proportion-card;
+      text-align: right;
+    }
+    > :nth-child(2) {
+      font-weight: bold;
+      font-size: 16px * $proportion-card;
+      line-height: 19px * $proportion-card;
+      text-align: right;
+    }
   }
 }
