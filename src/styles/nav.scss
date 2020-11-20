@@ -22,25 +22,24 @@
   text-transform: uppercase;
   white-space: nowrap;
 
-}
-
-.is-active,
-.navigation__link:hover {
-  color: $blue;
-}
-
-.is-active {
-  display: flex;
-  flex-direction: column;
-  line-height: $header-height;
-  position: relative;
-  &::after {
-    content: "";
-    background-color: $blue;
-    position: absolute;
-    top: 56px * $proportion-header;
-    height: 4px * $proportion-header;
-    width: 100%;
-    border-radius: 8px;
+  &--is-active {
+    display: flex;
+    flex-direction: column;
+    line-height: $header-height;
+    position: relative;
+    &::after {
+      content: "";
+      background-color: $blue;
+      position: absolute;
+      top: 56px * $proportion-header;
+      height: 4px * $proportion-header;
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+  
+  &--is-active,
+  &:hover {
+    color: $blue;
   }
 }
