@@ -16,25 +16,17 @@
   font-weight: bold;
   font-size: 14px * $proportion-card;
 
-  color: $white;
   border: 1px solid $blue;
   text-transform: uppercase;
 
   @include button-transition;
+  text-decoration: none;
 
-  &__link {
-    width: 100%;
-    text-decoration: none;
-    display: block;
-    color: #fff;
-    @include button-transition;
-  }
+  color: #fff;
+  @include button-transition;
 
   &:hover {
     background-color: white;
-
-    & > .button__link {
-      color: $blue;
-    }
+    color: $blue;
   }
 }

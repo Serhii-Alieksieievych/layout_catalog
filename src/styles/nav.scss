@@ -21,6 +21,7 @@
   font-size: 12px * $proportion-header;
   text-transform: uppercase;
   white-space: nowrap;
+  transition: 0.3s;
 
   &--is-active {
     display: flex;
@@ -37,7 +38,7 @@
       border-radius: 8px;
     }
   }
-  
+
   &--is-active,
   &:hover {
     color: $blue;
