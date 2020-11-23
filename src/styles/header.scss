@@ -1,23 +1,15 @@
 @import "variables";
 @import "mixines";
 
-.page__header {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  align-items: center;
-  justify-content: space-between;
-  height: $header-height;
-}
-
 .header {
   padding: 0 50px * $proportion-header;
-  
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
 
-.header__homepage-link {
-  display: flex;
-  :first-child {
+  &__homepage-link {
+    display: flex;
+  }
+
+  &__logo {
     height: 40px * $proportion-header;
     width: 40px * $proportion-header;
   }
